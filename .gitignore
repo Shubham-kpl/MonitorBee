@@ -9,3 +9,5 @@
 
 /backend/__pycache__
 /backend/uploaded_files
+
+/.gitattributes
