@@ -11,3 +11,6 @@
 /backend/uploaded_files
 
 /.gitattributes
+
+
+/backend/machine_learning/__pycache__

@@ -1,11 +1,19 @@
+opencv-python>=4.1.2.30
+filterpy
 fastapi
 uvicorn
-pydantic
-tensorflow
+numpy
 opencv-python
+tensorflow>=2.6.0
+tensorflow-datasets
+
+imutils
+pyserial
+pydantic
+pyyaml
+
 logging
 pytest-shutil
 # os-sys
-numpy
 subprocess.run
 typing
