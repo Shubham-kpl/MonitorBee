@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+tensorflow
+opencv-python
+logging
+pytest-shutil
+# os-sys
+numpy
+subprocess.run
+typing
