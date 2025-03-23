@@ -82,7 +82,7 @@ then install github desktop:
 
    ```bash
    cd beecognition/backend
-   pip install
+   pip install -r requirement.txt
    python main.py
    ```
 
@@ -93,6 +93,6 @@ then install github desktop:
    ```
 
    ```bash
-   cd model
+   cd backend/machine_learning
    python main.py --video video_path
    ```

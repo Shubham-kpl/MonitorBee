@@ -10,7 +10,7 @@ import os #using os dependent functionalities like making directories
 import numpy as np #handling numeric operations
 from fastapi.middleware.cors import CORSMiddleware
 
-import keras_models
+# import keras_models
 import keras
 
 logging.basicConfig(level=logging.DEBUG)
@@ -30,9 +30,9 @@ os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)  # Create the directory if it doesn
 
 # Load the model once at the startup
 # model_path = 'D:\\programforfun\\collegeprograms\\BeeCognition\\NewSavedModel\\model.h5'
-model_path = 'model/model.h5'
+model_path = 'D:\\coder27\\college\\MonitorBee\\model\\model.h5'
 logger.debug(f"Loading model from: {model_path}")
-model = keras.models.load_model(model_path)
+model = keras.models.load_model(model_path) 
 model.trainable = False
 logger.info("Model loaded successfully")
 
