@@ -117,6 +117,7 @@ then install github desktop:
 
    ```cmd
    # navigate to project root directory
+   python -m venv env
    .\env\scripts\activate
    ```
 
