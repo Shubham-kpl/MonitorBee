@@ -5,7 +5,7 @@ import "./input.scss";
 
 export default function Input() {
   return (
-    <div class="feature-content">
+    <div class="input">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button
