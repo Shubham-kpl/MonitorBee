@@ -142,5 +142,5 @@ then install github desktop:
 
    ```cmd
    cd backend/machine_learning
-   python main.py --video video_path
+   python main.py --video absolute_video_path
    ```
