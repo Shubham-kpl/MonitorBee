@@ -1,33 +1,38 @@
 import React from "react";
 import "./homeBanner.scss";
-import Header from "../header/Header";
 
 const HomeBanner = () => {
   return (
-    <section class="home-banner">
-      <div class="container">
-        <Header />
-        <div class="flex main-banner">
-          <div class="left-side-part">
-            <video autoPlay muted loop playsInline>
-              <source src="/videos/Gobuzzr-video.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="right-side-part flex">
-            <div class="right-content">
-              <h3>
-                Empowering Beekeepers with AI.
-                <p>Monitor your bees. Remotely.</p>
-              </h3>
-              <p>
-                An initiative by Computer engineering students from college of
-                technology,to monitor the real-time traffic to enhance the
-                pollination productivity with advanced image classification and video
-                monitoring for effective bee management. 
-              </p>
-            </div>
-          </div>
-        </div>
+    <section class="flex home-banner">
+      <div class="banner-left">
+        <img
+          src="./images/banner-img.jpeg"
+          alt=""
+          className="img-banner"
+          style={{ height: "20rem" }}
+        />
+      </div>
+      <div className="banner-center"></div>
+      <div class="banner-right flex">
+        <h1>Empowering Beekeepers with AI.</h1>
+        <h3 style={{ color: "indigo", fontWeight: 400 }}>
+          Monitor your bees, Remotely!
+        </h3>
+        <h5
+          style={{
+            fontWeight: 350,
+            wordSpacing: "4px",
+            letterSpacing: "1px",
+            margin: "2rem 0",
+          }}
+        >
+          An initiative by Computer Engineering students from College of
+          Technology, Pantnagar. This project monitors the real-time data
+          collected directly from the Bee Hives with advanced image
+          classification and video monitoring techniques resulting in effective
+          bee management and thus enhancing the bee health, efficiency of
+          pollination and the honey production.
+        </h5>
       </div>
     </section>
   );
