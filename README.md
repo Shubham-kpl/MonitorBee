@@ -116,6 +116,7 @@ then install github desktop:
 3. Run Backend setup
 
    ```cmd
+   # Before anything, create and activate a virtual environment
    # navigate to project root directory
    python -m venv env
    .\env\scripts\activate
