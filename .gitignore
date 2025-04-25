@@ -1,9 +1,5 @@
+# Virtual Env
 /env
 
-/backend/__pycache__
-/backend/uploaded_files
-
+# Common
 /.gitattributes
-
-
-/backend/machine_learning/__pycache__
