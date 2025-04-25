@@ -1,19 +1,19 @@
 import "./App.css";
 import Nav from "./components/navigation/Nav";
-import HomeBanner from "./components/homebanner/HomeBanner";
-import Input from "./components/input/Input";
-import About from "./components/about/About";
+import HomeBanner from "./components/banner/HomeBanner";
+import Input from "./components/input-image-video/Input";
+import AboutUs from "./components/about-us/About";
 import Footer from "./components/footer/Footer";
-import WhyBees from "./components/whybees/WhyBees";
+import WhyBees from "./components/bee-importance/WhyBees";
 
 function App() {
   return (
     <>
       <Nav />
       <HomeBanner />
-      <Input />
       <WhyBees />
-      <About />
+      <Input />
+      <AboutUs />
       <Footer />
     </>
   );
