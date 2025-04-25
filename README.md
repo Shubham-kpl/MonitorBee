@@ -122,9 +122,14 @@ then install github desktop:
    .\env\scripts\activate
    ```
 
-   ```bash
+   ```cmd
    cd beecognition/backend
    pip install -r requirements.txt
+   ```
+
+   Now, update "model_path" inside backend/image_classifier and backend/video_monitoring files
+
+   ```cmd
    python main.py
    ```
 
@@ -135,7 +140,7 @@ then install github desktop:
    .\env\scripts\activate
    ```
 
-   ```bash
+   ```cmd
    cd backend/machine_learning
    python main.py --video video_path
    ```
