@@ -1,6 +1,18 @@
-## MonitorBee : An AI powered honey bees management and activity monitoring system
+# MonitorBee : An AI powered honey bees management and activity monitoring system
 
-### Overview
+## Goals for this weekend
+
+### Frontend
+
+    - 	footer (contributors of project)
+
+    - 	input image/video section
+
+    - 	remove welcome BUZZER video
+
+    - 	uniformity in color scheme of page
+
+## Overview
 
 MonitorBee is a comprehensive platform designed to:
 
@@ -9,9 +21,9 @@ MonitorBee is a comprehensive platform designed to:
 - Image Classification and Video Monitoring
 - Provide detailed insights into the behaviors and health of bee colonies.
 
-### Features
+## Features
 
-#### 1. Image Classification
+### 1. Image Classification
 
 - **Description:** Classifies bee images
 - **Functionality:** Each image is analyzed, and a prediction probability is provided for each category
@@ -21,7 +33,7 @@ MonitorBee is a comprehensive platform designed to:
   - Wasp
   - Cooling state
 
-#### 2. Video Monitoring
+### 2. Video Monitoring
 
 - **Description:**
   - Tracks the in-out movement of bees
@@ -33,7 +45,7 @@ MonitorBee is a comprehensive platform designed to:
   - **Green dot:** Bee is cooling the hive
   - **Black dot:** Detected a wasp
 
-### Demo
+## Demo
 
 Watch the demo video of the Beecognition project: [Beecognition Demo Video](https://res.cloudinary.com/drz6w1d5q/video/upload/v1719299409/beecognition-demo-video_v3krmt.mp4)
 
@@ -41,28 +53,28 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](http
 
 ![](./beecognition-demo-video.mp4)
 
-### Technologies Involved
+## Technologies Involved
 
-#### Frontend
+### Frontend
 
 - **React:** For building the user interface.
 - **SCSS:** For styling the application.
 - **HTML5/CSS3:** Markup and style sheet languages for structuring and designing the web pages.
 
-#### Backend
+### Backend
 
 - **Flask:** A lightweight WSGI web application framework in Python.
 - **REST APIs:** For communication between the frontend and backend services.
 
-#### Model
+### Model
 
 - **TensorFlow/Keras:** For building and training the machine learning models.
 - **OpenCV:** For real-time computer vision tasks.
 - **Scikit-learn:** For additional machine learning utilities and functions.
 
-### Installation
+## Installation
 
-#### Prerequisites
+### Prerequisites
 
 first install git in your system:
 `https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe`
