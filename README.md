@@ -124,7 +124,7 @@ then install github desktop:
 
    ```bash
    cd beecognition/backend
-   pip install -r requirement.txt
+   pip install -r requirements.txt
    python main.py
    ```
 
