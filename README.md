@@ -18,6 +18,8 @@
 
 -     display `nice-looking-cuttable model` upon any error on image/video upload
 
+-     when we upload an image, the "Input" section must expand downwards and all the components below it must move downwards (with an eye pleasing transition effect)
+
 ### Backend
 
 -     nicely handle `image/video` input failures and display nicely on frontend
