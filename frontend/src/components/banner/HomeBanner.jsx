@@ -3,8 +3,8 @@ import "./homeBanner.scss";
 
 const HomeBanner = () => {
   return (
-    <section class="flex home-banner">
-      <div class="banner-left">
+    <section className="flex home-banner">
+      <div className="banner-left">
         <img
           src="./images/banner-img.jpeg"
           alt=""
@@ -13,7 +13,7 @@ const HomeBanner = () => {
         />
       </div>
       <div className="banner-center"></div>
-      <div class="banner-right flex">
+      <div className="banner-right flex">
         <h1>Empowering Beekeepers with AI.</h1>
         <h3 style={{ color: "indigo", fontWeight: 400 }}>
           Monitor your bees, Remotely!
