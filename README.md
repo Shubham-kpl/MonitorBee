@@ -12,6 +12,8 @@
 
     - 	uniformity in color scheme of page
 
+    -    if possible, change the url (based on different sections) when we navigate up and down (manually)
+
 ## Overview
 
 MonitorBee is a comprehensive platform designed to:
