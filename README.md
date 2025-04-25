@@ -4,15 +4,23 @@
 
 ### Frontend
 
-    - 	footer (contributors of project)
+-     footer (contributors of project) ✅
 
-    - 	input image/video section
+-     separate input image/video section ✅
 
-    - 	remove welcome BUZZER video
+-     remove welcome BUZZER video   ✅
 
-    - 	uniformity in color scheme of page
+-     uniformity in color scheme of page
 
-    -    if possible, change the url (based on different sections) when we navigate up and down (manually)
+-     if possible, change the url (based on different sections) when we navigate up and down (manually)
+
+-     provide a good look to image/video input section
+
+-     display `nice-looking-cuttable model` upon any error on image/video upload
+
+### Backend
+
+-     nicely handle `image/video` input failures and display nicely on frontend
 
 ## Overview
 
