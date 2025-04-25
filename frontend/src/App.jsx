@@ -4,15 +4,15 @@ import HomeBanner from "./components/banner/HomeBanner";
 import Input from "./components/input-image-video/Input";
 import AboutUs from "./components/about-us/About";
 import Footer from "./components/footer/Footer";
-import WhyBees from "./components/bee-importance/WhyBees";
+import BeeImportance from "./components/bee-importance/WhyBees";
 
 function App() {
   return (
     <>
-      <Nav />
-      <HomeBanner />
-      <WhyBees />
+      {/* <Nav /> */}
       <Input />
+      <HomeBanner />
+      <BeeImportance />
       <AboutUs />
       <Footer />
     </>
