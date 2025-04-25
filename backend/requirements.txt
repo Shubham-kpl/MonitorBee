@@ -3,7 +3,7 @@ filterpy
 fastapi
 uvicorn
 numpy
-opencv-python
+opencv-python   
 tensorflow>=2.6.0
 tensorflow-datasets
 
@@ -14,7 +14,7 @@ pyyaml
 
 logging
 pytest-shutil
-# os-sys
+os-sys
 subprocess.run
 typing
 
