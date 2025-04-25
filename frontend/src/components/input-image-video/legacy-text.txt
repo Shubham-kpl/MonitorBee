@@ -1,3 +1,0 @@
- BeeCognition monitors all bees and uses a neural network to detect
-            the above mentioned characteristics, counts all findings and sends
-            them to the ThingsNetwork using LoRaWAN.
