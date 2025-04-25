@@ -4,13 +4,15 @@
 
 ### Frontend
 
+-     Nav Bar
+
+-     uniformity in color scheme of page
+
 -     footer (contributors of project) ✅
 
 -     separate input image/video section ✅
 
 -     remove welcome BUZZER video   ✅
-
--     uniformity in color scheme of page
 
 -     if possible, change the url (based on different sections) when we navigate up and down (manually)
 
@@ -19,6 +21,8 @@
 -     display `nice-looking-cuttable model` upon any error on image/video upload
 
 -     when we upload an image, the "Input" section must expand downwards and all the components below it must move downwards (with an eye pleasing transition effect)
+
+-     beautify the dropdown of "About Us"
 
 ### Backend
 
