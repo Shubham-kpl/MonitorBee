@@ -29,7 +29,7 @@ UPLOAD_DIRECTORY = "uploaded_files"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)  # Create the directory if it doesn't exist
 
 # Load the model once at the startup
-model_path = 'D:\\coder27\\college\\MonitorBee\\model\\model.h5'
+model_path = 'F:\\shubham programming\\projects\\MonitorBee\\model\\model.h5'
 logger.debug(f"Loading model from: {model_path}")
 model = keras.models.load_model(model_path) 
 model.trainable = False
