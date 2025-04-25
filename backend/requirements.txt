@@ -18,6 +18,7 @@ pytest-shutil
 subprocess.run
 typing
 
+python-multipart
+
 # 22/03/2025
 # pip install cloud-tpu-client
-# pip install python-multipart
