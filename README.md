@@ -28,6 +28,18 @@
 
 -     nicely handle `image/video` input failures and display nicely on frontend
 
+-     handle image/video upload failure (fix errors in code) ✅
+
+-     resolve old dependencies and libraries ✅
+
+-     model not loading successfully (compilation issue) : Manual Compilation ✅
+
+### Model
+
+-     Output for each comes out varroa
+
+-     Fix Probability of image prediction > 1 (not possible)
+
 ## Overview
 
 MonitorBee is a comprehensive platform designed to:
