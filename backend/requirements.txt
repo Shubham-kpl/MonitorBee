@@ -18,7 +18,15 @@ os-sys
 subprocess.run
 typing
 
-python-multipart
 
-# 22/03/2025
-# pip install cloud-tpu-client
+# RECOMMENDED BY TERMINAL
+
+python-multipart # To run multiports
+
+"google-api-python-client>=2.0.0" --upgrade # upgrade google-api-python-client
+"google-api-core>=2.0.0" --upgrade  # upgrade google-api-core
+"protobuf>=4.25.2,<6.0.0" --upgrade # upgrade protobuf
+
+
+# To use TPU : NOT COMPULSORY
+# cloud-tpu-client 
