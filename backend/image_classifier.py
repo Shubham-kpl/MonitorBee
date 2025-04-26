@@ -1,9 +1,12 @@
+# import sys
+# print("Using interpreter:", sys.executable)
+
 from fastapi import FastAPI, File, UploadFile, HTTPException
 # from fastapi.responses import JSONResponse
 import uvicorn
 from pydantic import BaseModel #used for data validation,create data models for request and response bodies, ensuring the data conforms to the expected format.
-import tensorflow as tf #load and run pretrained model
-import cv2
+import tensorflow as tf  #load and run pretrained model
+import cv2 
 import logging #log messages
 import shutil #handling file operation like copying and moving
 import os #using os dependent functionalities like making directories
