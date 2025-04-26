@@ -6,8 +6,8 @@ const Image = () => {
   const [uploadedImageUrl, setUploadedImageUrl] = useState(null);
   const [prediction, setPrediction] = useState(null);
 
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
   };
 
   const handleSubmit = async () => {
@@ -21,7 +21,7 @@ const Image = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/upload",
+        "http://localhost:8000/upload-img",
         formData,
         {
           headers: {
