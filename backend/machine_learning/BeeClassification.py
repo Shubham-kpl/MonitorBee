@@ -71,8 +71,7 @@ class BeeClassification(BeeProcess):
 
         # Include tensorflow within the process
         import tensorflow as tf
-        from keras import layers
-        from keras_models.models import Sequential
+        # from tf.keras.models import Sequential
 
         _process_time = 0
         _process_cnt = 0
