@@ -23,7 +23,7 @@ const Video = () => {
     try {
       // Upload the video
       const response = await axios.post(
-        "http://localhost:8002/upload-video",
+        "http://localhost:8002/upload-vid",
         formData,
         {
           headers: {
@@ -44,6 +44,8 @@ const Video = () => {
           },
         }
       );
+
+      console.log(startMonitoringResponse);
 
       // Handle success
       setMonitoringStarted(true);
