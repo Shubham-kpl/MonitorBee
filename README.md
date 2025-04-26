@@ -4,6 +4,10 @@
 
 ### Frontend
 
+-     Beautify errors and alerts (use closable attractive models)
+
+-     Show monitoring video on webpage (instead of python dialog) : Handle routes properly (install dependencies)
+
 -     Nav Bar
 
 -     uniformity in color scheme of page
@@ -35,6 +39,8 @@
 -     model not loading successfully (compilation issue) : Manual Compilation ✅
 
 ### Model
+
+-     Ability to stop monitoring upon clicking (say esc or something) in the video field
 
 -     Output for each comes out varroa
 
