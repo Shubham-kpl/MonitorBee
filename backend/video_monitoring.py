@@ -1,3 +1,6 @@
+print("Video_Monitoring.py started 📻❤️‍🔥")
+
+
 import subprocess
 from fastapi import FastAPI, BackgroundTasks, File, UploadFile, HTTPException
 import os
@@ -18,13 +21,11 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 # Directory to save uploaded files
-# UPLOAD_DIRECTORY = r"D:\\programforfun\\collegeprograms\\BeeCognition\\model"
 UPLOAD_DIRECTORY = "uploaded_files"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)  # Create the directory if it doesn't exist
 
 monitoring_process = None
-# UPLOAD_DIRECTORY = r"D:\\programforfun\\collegeprograms\\BeeCognition\\model\\main.py"
-script_path = "../model/main.py"
+script_path = "./machine_learning/main.py"
 
 def start_monitoring(video_path: Optional[str] = None):
     global monitoring_process
@@ -40,8 +41,8 @@ def stop_monitoring():
         monitoring_process.wait()
         return {"message": "Monitoring stopped successfully"}
 
-@app.post("/upload-video")
-async def upload_video(file: UploadFile = File(...)):
+@app.post("/upload-vid")
+async def upload_vid(file: UploadFile = File(...)):
     try:
         file_location = os.path.join(UPLOAD_DIRECTORY, file.filename)
         with open(file_location, "wb+") as file_object:
