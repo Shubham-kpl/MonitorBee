@@ -68,7 +68,7 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 
 <h2>First install git in your system</h2>
 
-```cmd
+```
 https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
 ```
 
