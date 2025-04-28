@@ -20,22 +20,22 @@ class Statistics(object):
         self._beesOut = 0
         self._beesInOverall = 0
         self._beesOutOverall = 0
-        self._wespenCount = 0
-        self._wespenCountOverall = 0
+        self.waspCount = 0
+        self.waspCountOverall = 0
         self._varroaCount = 0
         self._varroaCountOverall = 0
         self._pollenCount = 0
         self._pollenCountOverall = 0
         self._coolingCount = 0
         self._coolingCountOverall = 0
-        self._processedFames = 0
-        self._processedFamesOverlall = 0
+        self._processedFrames = 0
+        self._processedFramesOverall = 0
 
     def frameProcessed(self):
         """! Increases the frame processed counter
         """
-        self._processedFames += 1
-        self._processedFamesOverlall += 1
+        self._processedFrames += 1
+        self._processedFramesOverall += 1
 
     def addBeeIn(self):
         """! Increases the bee-in counter
@@ -65,8 +65,8 @@ class Statistics(object):
              @param tag any of ("wasps", "varroa", "pollen", "cooling")
         """
         if "wasps" == tag:
-            self._wespenCount += 1
-            self._wespenCountOverall += 1
+            self.waspCount += 1
+            self.waspCountOverall += 1
         if "varroa" == tag:
             self._varroaCount += 1
             self._varroaCountOverall += 1
@@ -103,37 +103,37 @@ class Statistics(object):
              cooling, bees in, bees out and the amount of processed frames
              @return tuple
         """
-        return (self._wespenCount,
+        return (self.waspCount,
                 self._varroaCount,
                 self._pollenCount,
                 self._coolingCount,
                 self._beesIn,
                 self._beesOut,
-                self._processedFames)
+                self._processedFrames)
 
     def readOverallStatistics(self):
         """! Return the overall statistics for counted wasps, varroa, pollen,
              cooling, bees in, bees out and the amount of processed frames
              @return tuple
         """
-        return (self._wespenCountOverall,
+        return (self.waspCountOverall,
                 self._varroaCountOverall,
                 self._pollenCountOverall,
                 self._coolingCountOverall,
                 self._beesInOverall,
                 self._beesOutOverall,
-                self._processedFamesOverall)
+                self._processedFramesOverall)
 
     def resetStatistics(self):
         """! Resets the current statistics
         """
-        self._wespenCount = 0
+        self.waspCount = 0
         self._varroaCount = 0
         self._pollenCount = 0
         self._coolingCount = 0
         self._beesIn = 0
         self._beesOut = 0
-        self._processedFames = 0
+        self._processedFrames = 0
 
 
 __dh = None

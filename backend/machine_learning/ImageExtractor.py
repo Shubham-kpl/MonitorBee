@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 
 class ImageExtractor(BeeProcess):
     """! The 'ImageExtractor' class provides a process that extracts
-          bee-images from a givem video frame. It uses a queue for
+          bee-images from a given video frame. It uses a queue for
           incoming requests, see 'setInQueue' and a one
           queue to provides results, see 'setResultQueue'.
 
