@@ -84,7 +84,7 @@ class BeeClassification(BeeProcess):
 
         # Load the model
         try:
-            model_path = 'D:\\programforfun\\collegeprograms\\BeeCognition\\NewSavedModel\\model.h5'
+            model_path = 'F:\shubham programming\projects\MonitorBee\model\model.h5'
             logger.debug(f"Loading model from: {model_path}")
             _model = tf.keras.models.load_model(model_path)
             _model.trainable = False
@@ -107,7 +107,7 @@ class BeeClassification(BeeProcess):
 
             # Load all images from the "Images" folder and feed them to the neural network
             # This ensures that the network is fully running when we start other processes
-            images_dir=r"D:\\programforfun\\collegeprograms\\BeeCognition\\model\\Images"
+            images_dir=r"F:\shubham programming\projects\MonitorBee\data\Images\all-images"
             test_images = [join(images_dir, f) for f in listdir(images_dir) if isfile(join(images_dir, f))]
             imgs = []
             for item in test_images:
