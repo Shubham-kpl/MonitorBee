@@ -1,34 +1,20 @@
 import "./App.css";
+import Navbar from "./components/navbar";
+import AboutTeam from "./components/about_team";
+import Upload from "./components/upload";
+import BeeImportance from "./components/about_bees";
+import AboutProject from "./components/about_project";
+import Footer from "./components/footer";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Nav from "./components/navigation/Nav";
-import HomeBanner from "./components/banner/HomeBanner";
-import Input from "./components/input-image-video/Input";
-import LiveStream from "./components/LiveStream";
-import AboutUs from "./components/about-us/About";
-import Footer from "./components/footer/Footer";
-import BeeImportance from "./components/bee-importance/WhyBees";
-
-function App() {
+export default function App() {
   return (
     <>
-      {/* <Nav /> */}
-      <Input />
-      <Router>
-        <Routes>
-          {" "}
-          <Route path="/" element={<HomeBanner />} />
-          {/* Add a home page route */}
-          <Route path="/upload-vid" element={<LiveStream />} />
-        </Routes>
-      </Router>
-      <HomeBanner />
+      <Navbar />
+      <AboutProject />
+      <Upload />
       <BeeImportance />
-      <AboutUs />
+      <AboutTeam />
       <Footer />
     </>
   );
 }
-
-export default App;

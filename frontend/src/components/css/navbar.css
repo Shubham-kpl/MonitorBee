@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #34495e;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  padding: 1rem 2rem !important;
+}
+
+.navbar .logo {
+  color: #ecf0f1;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-links li a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
