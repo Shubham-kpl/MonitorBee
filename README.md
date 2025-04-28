@@ -74,7 +74,7 @@ https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2
 
 <h2>Then install github desktop</h2>
 
-```cmd
+```
 https://central.github.com/deployments/desktop/desktop/latest/win32
 ```
 
@@ -93,8 +93,9 @@ git clone https://github.com/Shubham-Kpl/BeeCognition.git
  <li> 
   <h2>Run Frontend setup</h2>
 
-```cmd
-cd frontend npm install 
+```
+cd frontend 
+npm install 
 npm run dev
 ```
 
@@ -105,20 +106,21 @@ npm run dev
 
   <h3> Before anything, create and activate a virtual environment: </h3>
 
-```cmd
+```
 python -m venv env .\env\scripts\activate
 ```
 
   <h3>Then install requirements:</h3>
 
-```cmd
-cd backend pip install -r requirements.txt
+```
+cd backend 
+pip install -r requirements.txt
 ```
 
   <h3>Finally run backend:</h3>
    <i> (You might need to change model_path in various files (e.g. backend/image_classifier, backend/video_monitoring)) </i>
 
-```cmd
+```
 python main.py
 ```
 
@@ -128,7 +130,7 @@ python main.py
 
 First navigate to project root directory
 
-```cmd
+```
 .\env\scripts\activate
 cd backend/machine_learning
 python main.py --video video_path
