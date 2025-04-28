@@ -66,21 +66,19 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 
 ## Run on your device
 
-### Prerequisites
-
-<h3>First install git in your system</h3>
+<h2>First install git in your system</h2>
 
 ```cmd
 https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
 ```
 
-<h3>Then install github desktop</h3>
+<h2>Then install github desktop</h2>
 
 ```cmd
 https://central.github.com/deployments/desktop/desktop/latest/win32
 ```
 
-### Installations and Set Up
+<h2> Installations and Set Up </h2> 
 
 <ol>
   <li>
