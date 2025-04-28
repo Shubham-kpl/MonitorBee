@@ -69,12 +69,16 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 ### Prerequisites
 
 <p>first install git in your system:</p>
-<br />
-`https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe`
+
+```cmd
+https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
+```
 
 <p>then install github desktop:</p>
-<br />
-`https://central.github.com/deployments/desktop/desktop/latest/win32`
+
+```cmd
+https://central.github.com/deployments/desktop/desktop/latest/win32
+```
 
 ### Installations and Set Up
 
@@ -90,23 +94,35 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
   </li>
   <li> 
   <h2>Run Frontend setup</h2>
-  ```cmd cd frontend npm install npm run dev ```</li>
-   
-   
-  <li>
-  <h2>Run Backend setup</h2>
 
-    <p> Before anything, create and activate a virtual environment </p>
-    ```cmd python -m venv env .\env\scripts\activate ```
+````cmd
+ cd frontend npm install npm run dev
+ ```</li>
 
-    <p>Install requirements</p>
-    ```cmd cd backend pip install -r requirements.txt ```
 
-    <p>Finally run backend</p>
-    ```cmd # You might need to change model_path in various files (e.g.
-    backend/image_classifier, backend/video_monitoring) python main.py ```
+<li>
+<h2>Run Backend setup</h2>
 
-  </li>
+  <p> Before anything, create and activate a virtual environment </p>
+
+  ```cmd
+  python -m venv env .\env\scripts\activate
+  ```
+
+  <p>Install requirements</p>
+
+  ```cmd
+  cd backend pip install -r requirements.txt
+  ```
+
+  <p>Finally run backend</p>
+
+  ```cmd
+  # You might need to change model_path in various files (e.g.
+  backend/image_classifier, backend/video_monitoring) python main.py
+  ```
+
+</li>
 </ol>
 
 ### To run the model independently
@@ -114,7 +130,7 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 ```cmd
 # navigate to project root directory
 .\env\scripts\activate
-```
+````
 
 ```cmd
 cd backend/machine_learning
