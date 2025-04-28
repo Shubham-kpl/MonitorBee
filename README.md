@@ -68,13 +68,13 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 
 ### Prerequisites
 
-<p>first install git in your system:</p>
+<p>First install git in your system</p>
 
 ```cmd
 https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
 ```
 
-<p>then install github desktop:</p>
+<p>Then install github desktop</p>
 
 ```cmd
 https://central.github.com/deployments/desktop/desktop/latest/win32
@@ -87,8 +87,8 @@ https://central.github.com/deployments/desktop/desktop/latest/win32
    <h2> Clone the repository:</h2>
 
     ```cmd
-    git clone
-    https://github.com/Shubham-Kpl/BeeCognition.git
+    cd PROJECT_DIRECTORY
+    git clone https://github.com/Shubham-Kpl/BeeCognition.git
     ```
 
   </li>
@@ -117,10 +117,10 @@ cd backend pip install -r requirements.txt
 ```
 
   <p>Finally run backend</p>
+   <i> You might need to change model_path in various files (e.g. backend/image_classifier, backend/video_monitoring) </i>
 
 ```cmd
-# You might need to change model_path in various files (e.g.
-backend/image_classifier, backend/video_monitoring) python main.py
+python main.py
 ```
 
 </li>
