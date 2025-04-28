@@ -4,17 +4,17 @@
   margin-bottom: 20px;
   border-radius: 3px;
   padding: 1rem 2rem !important;
-}
-
-.navbar .logo {
-  color: #ecf0f1;
-  font-size: 24px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 3rem;
+}
+
+.nav-links li {
+  font-size: 1.2rem;
 }
 
 .nav-links li a {

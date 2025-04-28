@@ -3,7 +3,9 @@ import "./css/navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">Logo</div>
+      <div className="logo">
+        <img src="../../images/bee.png" style={{ height: "5rem" }}></img>
+      </div>
       <ul className="nav-links">
         <li>
           <a href="#about-project">The Project</a>

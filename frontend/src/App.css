@@ -2,7 +2,8 @@
 
 body {
   padding: 1rem 4rem;
-  background-color: #f4f4f4;
+  font-family: "Open Sans", "Poppins";
+  background-color: #f4f4f4 !important;
 }
 
 /* .box {
