@@ -11,11 +11,11 @@ MonitorBee is a comprehensive platform designed to:
 
 ## How does it work
 
-Each frame provided by the camera (or video file) will be processed to identify the bees in the image. The found bee positions will then be used to reconstruct the bee movements and paths using kalman filters. The paths are then used to count the bees entering or leaving the hive. Where the hive entry is on the upper part of the filmed pane and the exit is on the bottom.
+1. Each frame provided by the camera (or video file) will be processed to identify the bees in the image. The found bee positions will then be used to reconstruct the bee movements and paths using kalman filters. The paths are then used to count the bees entering or leaving the hive. Where the hive entry is on the upper part of the filmed pane and the exit is on the bottom.
 
-Each detected bee will then be cut from the image, rotated and forwarded to a neural network for classification.
+2. Each detected bee will then be cut from the image, rotated and forwarded to a neural network for classification.
 
-The neural network performs simple classification tasks to identify bees with pollen, varroa mite infected bees, bees cooling the hive or wasp and counts them. The results can also be visualized. The neural network runs in a separate process and the results may be too late to visualize them, as the bee may have already left the filmed area. But that depends on the performance of the used system.
+3. The neural network performs simple classification tasks to identify bees with pollen, varroa mite infected bees, bees cooling the hive or wasp and counts them. The results can also be visualized. The neural network runs in a separate process and the results may be too late to visualize them, as the bee may have already left the filmed area. But that depends on the performance of the used system.
 
 ## Features
 
@@ -137,35 +137,37 @@ then install github desktop:
 
 ### Frontend
 
--     Beautify errors and alerts (use closable attractive models)
+- Put in readme where all you changed model path
 
--     Show monitoring video on webpage (instead of python dialog) : Handle routes properly (install dependencies)
+- Beautify errors and alerts (use closable attractive models)
 
--     Nav Bar
+- Show monitoring video on webpage (instead of python dialog) : Handle routes properly (install dependencies)
 
--     uniformity in color scheme of page
+- Nav Bar
 
--✅ footer (contributors of project)
+- uniformity in color scheme of page
 
--✅ separate input image/video section
+-✅footer (contributors of project)
 
--✅ remove welcome BUZZER video
+-✅separate input image/video section
 
--     if possible, change the url (based on different sections) when we navigate up and down (manually)
+-✅remove welcome BUZZER video
 
--     provide a good look to image/video input section
+- if possible, change the url (based on different sections) when we navigate up and down (manually)
 
--     display `nice-looking-cuttable model` upon any error on image/video upload
+- provide a good look to image/video input section
 
--     when we upload an image, the "Input" section must expand downwards and all the components below it must move downwards (with an eye pleasing transition effect)
+- display `nice-looking-cuttable model` upon any error on image/video upload
 
--     beautify the dropdown of "About Us"
+- when we upload an image, the "Input" section must expand downwards and all the components below it must move downwards (with an eye pleasing transition effect)
+
+- beautify the dropdown of "About Us"
 
 ### Backend
 
--     Stop Video monitoring when button is clicked / any key is pressed
+- Stop Video monitoring when button is clicked / any key is pressed
 
--     nicely handle `image/video` input failures and display nicely on frontend
+- nicely handle `image/video` input failures and display nicely on frontend
 
 -✅ handle image/video upload failure (fix errors in code)
 
@@ -175,8 +177,8 @@ then install github desktop:
 
 ### Model
 
--     Ability to stop monitoring upon clicking (say esc or something) in the video field
+- Ability to stop monitoring upon clicking (say esc or something) in the video field
 
--     Output for each comes out varroa
+- Output for each comes out varroa
 
--     Fix Probability of image prediction > 1 (not possible)
+- Fix Probability of image prediction > 1 (not possible)
