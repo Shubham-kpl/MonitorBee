@@ -1,51 +1,5 @@
 # MonitorBee : An AI powered honey bees management and activity monitoring system
 
-## Goals for this weekend
-
-### Frontend
-
--     Beautify errors and alerts (use closable attractive models)
-
--     Show monitoring video on webpage (instead of python dialog) : Handle routes properly (install dependencies)
-
--     Nav Bar
-
--     uniformity in color scheme of page
-
--     footer (contributors of project) ✅
-
--     separate input image/video section ✅
-
--     remove welcome BUZZER video   ✅
-
--     if possible, change the url (based on different sections) when we navigate up and down (manually)
-
--     provide a good look to image/video input section
-
--     display `nice-looking-cuttable model` upon any error on image/video upload
-
--     when we upload an image, the "Input" section must expand downwards and all the components below it must move downwards (with an eye pleasing transition effect)
-
--     beautify the dropdown of "About Us"
-
-### Backend
-
--     nicely handle `image/video` input failures and display nicely on frontend
-
--     handle image/video upload failure (fix errors in code) ✅
-
--     resolve old dependencies and libraries ✅
-
--     model not loading successfully (compilation issue) : Manual Compilation ✅
-
-### Model
-
--     Ability to stop monitoring upon clicking (say esc or something) in the video field
-
--     Output for each comes out varroa
-
--     Fix Probability of image prediction > 1 (not possible)
-
 ## Overview
 
 MonitorBee is a comprehensive platform designed to:
@@ -54,6 +8,14 @@ MonitorBee is a comprehensive platform designed to:
 - classify bee activities using advanced machine learning techniques.
 - Image Classification and Video Monitoring
 - Provide detailed insights into the behaviors and health of bee colonies.
+
+## How does it work
+
+Each frame provided by the camera (or video file) will be processed to identify the bees in the image. The found bee positions will then be used to reconstruct the bee movements and paths using kalman filters. The paths are then used to count the bees entering or leaving the hive. Where the hive entry is on the upper part of the filmed pane and the exit is on the bottom.
+
+Each detected bee will then be cut from the image, rotated and forwarded to a neural network for classification.
+
+The neural network performs simple classification tasks to identify bees with pollen, varroa mite infected bees, bees cooling the hive or wasp and counts them. The results can also be visualized. The neural network runs in a separate process and the results may be too late to visualize them, as the bee may have already left the filmed area. But that depends on the performance of the used system.
 
 ## Features
 
@@ -162,3 +124,59 @@ then install github desktop:
    cd backend/machine_learning
    python main.py --video absolute_video_path
    ```
+
+## What is still to do?
+
+- Optimize the neural network with live data. Currently everything is based on video material that was captured at the end of the year.
+- The neural network is trained on images of the size 75x150 pixels. The results may be better with larger images, but the impact to the performance has to be evaluated.
+- Optimize tracking. Some bee tracks are still lost, especially when bees fly around in the camera system.
+- Camera input was not yet implemented. Just a minor thing, but I cannot test anything, because the bees are already hibernating.
+- Write documentation
+
+## Goals for this weekend
+
+### Frontend
+
+-     Beautify errors and alerts (use closable attractive models)
+
+-     Show monitoring video on webpage (instead of python dialog) : Handle routes properly (install dependencies)
+
+-     Nav Bar
+
+-     uniformity in color scheme of page
+
+-✅ footer (contributors of project)
+
+-✅ separate input image/video section
+
+-✅ remove welcome BUZZER video
+
+-     if possible, change the url (based on different sections) when we navigate up and down (manually)
+
+-     provide a good look to image/video input section
+
+-     display `nice-looking-cuttable model` upon any error on image/video upload
+
+-     when we upload an image, the "Input" section must expand downwards and all the components below it must move downwards (with an eye pleasing transition effect)
+
+-     beautify the dropdown of "About Us"
+
+### Backend
+
+-     Stop Video monitoring when button is clicked / any key is pressed
+
+-     nicely handle `image/video` input failures and display nicely on frontend
+
+-✅ handle image/video upload failure (fix errors in code)
+
+-✅ resolve old dependencies and libraries
+
+-✅ model not loading successfully (compilation issue) : Manual Compilation
+
+### Model
+
+-     Ability to stop monitoring upon clicking (say esc or something) in the video field
+
+-     Output for each comes out varroa
+
+-     Fix Probability of image prediction > 1 (not possible)
