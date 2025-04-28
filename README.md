@@ -129,7 +129,7 @@ python main.py
 
 First navigate to project root directory
 
-````cmd
+```cmd
 .\env\scripts\activate
 cd backend/machine_learning
 python main.py --video video_path
@@ -137,7 +137,6 @@ python main.py --video video_path
 
 </li>
 </ol>
-
 
 ## What is still to do?
 
@@ -196,4 +195,7 @@ python main.py --video video_path
 - Output for each comes out varroa
 
 - Fix Probability of image prediction > 1 (not possible)
-````
+
+```
+
+```
