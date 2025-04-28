@@ -20,6 +20,8 @@ def main():
 
     # Check input format: camera or video file
     args = get_args()
+    print(args)
+    print(args.video)
     if args.video:
         logger.info("Starting on video file '%s'" % (args.video))
         imgProvider = ImageProvider(video_file=args.video)
