@@ -1,7 +1,9 @@
 # Virtual Env
 /env
-/venv
 
 # Common
-/.gitattributes
-/Environment changes - MonitorBee.txt
+/REFERENCES
+/data
+
+# Backend
+/backend/uploaded_files
