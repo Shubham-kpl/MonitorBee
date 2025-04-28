@@ -196,6 +196,4 @@ python main.py --video video_path
 
 - Fix Probability of image prediction > 1 (not possible)
 
-```
-
-```
+<p>Happy Coding! Happy Life!</p>
