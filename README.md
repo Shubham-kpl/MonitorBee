@@ -85,22 +85,23 @@ https://central.github.com/deployments/desktop/desktop/latest/win32
    <h2> Clone the repository:</h2>
 
 ```
-    cd PROJECT_DIRECTORY
-    git clone https://github.com/Shubham-Kpl/BeeCognition.git
-    ```
+cd PROJECT_DIRECTORY
+git clone https://github.com/Shubham-Kpl/BeeCognition.git
+```
 
-  </li>
-  <li> 
+ </li>
+ <li> 
   <h2>Run Frontend setup</h2>
 
 ```cmd
-cd frontend npm install npm run dev
+cd frontend npm install 
+npm run dev
 ```
 
  </li>
 
-<li>
-<h2>Run Backend setup</h2>
+ <li>
+  <h2>Run Backend setup</h2>
 
   <h3> Before anything, create and activate a virtual environment: </h3>
 
