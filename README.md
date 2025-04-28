@@ -39,6 +39,8 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 
 ## How does it work
 
+(<i>Original credits for the machine learning model: Created by Fabian Hickert - <a href="https://www.github.com/BeeAlarmed " target="_blank">BeeAlarmed</a>)
+
 1. Each frame provided by the camera (or video file) will be processed to identify the bees in the image. The found bee positions will then be used to reconstruct the bee movements and paths using kalman filters. The paths are then used to count the bees entering or leaving the hive. Where the hive entry is on the upper part of the filmed pane and the exit is on the bottom.
 
 2. Each detected bee will then be cut from the image, rotated and forwarded to a neural network for classification.
@@ -66,60 +68,61 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 
 ## Run on your device
 
-### Prerequisites
+<h2>First install git in your system</h2>
 
-<h3>First install git in your system</h3>
-
-```cmd
+```
 https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
 ```
 
-<h3>Then install github desktop</h3>
+<h2>Then install github desktop</h2>
 
-```cmd
+```
 https://central.github.com/deployments/desktop/desktop/latest/win32
 ```
 
-### Installations and Set Up
+<h2> Installations and Set Up </h2> 
 
 <ol>
   <li>
    <h2> Clone the repository:</h2>
 
-    ```cmd
-    cd PROJECT_DIRECTORY
-    git clone https://github.com/Shubham-Kpl/BeeCognition.git
-    ```
+```
+cd PROJECT_DIRECTORY
+git clone https://github.com/Shubham-Kpl/BeeCognition.git
+```
 
-  </li>
-  <li> 
+ </li>
+ <li> 
   <h2>Run Frontend setup</h2>
 
-```cmd
-cd frontend npm install npm run dev
+```
+cd frontend 
+npm install 
+npm run dev
 ```
 
  </li>
 
-<li>
-<h2>Run Backend setup</h2>
+ <li>
+  <h2>Run Backend setup</h2>
 
   <h3> Before anything, create and activate a virtual environment: </h3>
 
-```cmd
+```
 python -m venv env .\env\scripts\activate
 ```
 
   <h3>Then install requirements:</h3>
 
-```cmd
-cd backend pip install -r requirements.txt
+```
+cd backend 
+pip install -r requirements.txt
 ```
 
   <h3>Finally run backend:</h3>
    <i> (You might need to change model_path in various files (e.g. backend/image_classifier, backend/video_monitoring)) </i>
 
-```cmd
+```
 python main.py
 ```
 
@@ -129,7 +132,7 @@ python main.py
 
 First navigate to project root directory
 
-```cmd
+```
 .\env\scripts\activate
 cd backend/machine_learning
 python main.py --video video_path
