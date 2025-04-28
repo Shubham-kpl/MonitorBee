@@ -95,32 +95,33 @@ https://central.github.com/deployments/desktop/desktop/latest/win32
   <li> 
   <h2>Run Frontend setup</h2>
 
-````cmd
- cd frontend npm install npm run dev
- ```</li>
+```cmd
+cd frontend npm install npm run dev
+```
 
+ </li>
 
 <li>
 <h2>Run Backend setup</h2>
 
   <p> Before anything, create and activate a virtual environment </p>
 
-  ```cmd
-  python -m venv env .\env\scripts\activate
-  ```
+```cmd
+python -m venv env .\env\scripts\activate
+```
 
   <p>Install requirements</p>
 
-  ```cmd
-  cd backend pip install -r requirements.txt
-  ```
+```cmd
+cd backend pip install -r requirements.txt
+```
 
   <p>Finally run backend</p>
 
-  ```cmd
-  # You might need to change model_path in various files (e.g.
-  backend/image_classifier, backend/video_monitoring) python main.py
-  ```
+```cmd
+# You might need to change model_path in various files (e.g.
+backend/image_classifier, backend/video_monitoring) python main.py
+```
 
 </li>
 </ol>
@@ -130,7 +131,7 @@ https://central.github.com/deployments/desktop/desktop/latest/win32
 ```cmd
 # navigate to project root directory
 .\env\scripts\activate
-````
+```
 
 ```cmd
 cd backend/machine_learning
