@@ -39,7 +39,7 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 
 ## How does it work
 
-(<i>Original credits for the machine learning model: Created by Fabian Hickert - <a href="https://www.github.com/BeeAlarmed " target="_blank">BeeAlarmed</a>)
+(<i>Original credits for the machine learning model: Created by Fabian Hickert - <a href="https://www.github.com/BeeAlarmed " target="_blank">BeeAlarmed</a></i>)
 
 1. Each frame provided by the camera (or video file) will be processed to identify the bees in the image. The found bee positions will then be used to reconstruct the bee movements and paths using kalman filters. The paths are then used to count the bees entering or leaving the hive. Where the hive entry is on the upper part of the filmed pane and the exit is on the bottom.
 
