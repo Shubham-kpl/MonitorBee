@@ -124,21 +124,20 @@ python main.py
 ```
 
 </li>
-<li><h3> To run the model independently</h3>
+<li>
+<h3> To run the model independently</h3>
 
 First navigate to project root directory
 
 ````cmd
 .\env\scripts\activate
-```</li>
-</ol>
-
-
-
-```cmd
 cd backend/machine_learning
 python main.py --video video_path
-````
+```
+
+</li>
+</ol>
+
 
 ## What is still to do?
 
@@ -162,11 +161,11 @@ python main.py --video video_path
 
 - uniformity in color scheme of page
 
--✅footer (contributors of project)
+- footer (contributors of project) ✅
 
--✅separate input image/video section
+- separate input image/video section ✅
 
--✅remove welcome BUZZER video
+- remove welcome BUZZER video ✅
 
 - if possible, change the url (based on different sections) when we navigate up and down (manually)
 
@@ -184,11 +183,11 @@ python main.py --video video_path
 
 - nicely handle `image/video` input failures and display nicely on frontend
 
--✅ handle image/video upload failure (fix errors in code)
+- handle image/video upload failure (fix errors in code) ✅
 
--✅ resolve old dependencies and libraries
+- resolve old dependencies and libraries ✅
 
--✅ model not loading successfully (compilation issue) : Manual Compilation
+- model not loading successfully (compilation issue) : Manual Compilation ✅
 
 ### Model
 
@@ -197,3 +196,4 @@ python main.py --video video_path
 - Output for each comes out varroa
 
 - Fix Probability of image prediction > 1 (not possible)
+````
