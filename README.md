@@ -9,14 +9,6 @@ MonitorBee is a comprehensive platform designed to:
 - Image Classification and Video Monitoring
 - Provide detailed insights into the behaviors and health of bee colonies.
 
-## How does it work
-
-1. Each frame provided by the camera (or video file) will be processed to identify the bees in the image. The found bee positions will then be used to reconstruct the bee movements and paths using kalman filters. The paths are then used to count the bees entering or leaving the hive. Where the hive entry is on the upper part of the filmed pane and the exit is on the bottom.
-
-2. Each detected bee will then be cut from the image, rotated and forwarded to a neural network for classification.
-
-3. The neural network performs simple classification tasks to identify bees with pollen, varroa mite infected bees, bees cooling the hive or wasp and counts them. The results can also be visualized. The neural network runs in a separate process and the results may be too late to visualize them, as the bee may have already left the filmed area. But that depends on the performance of the used system.
-
 ## Features
 
 ### 1. Image Classification
@@ -43,11 +35,15 @@ MonitorBee is a comprehensive platform designed to:
 
 ## Demo
 
-Watch the demo video of the Beecognition project: [Beecognition Demo Video](https://res.cloudinary.com/drz6w1d5q/video/upload/v1719299409/beecognition-demo-video_v3krmt.mp4)
+Watch the demo video of the Beecognition project: [Beecognition Demo Video](./data/beecognition-demo-video.mp4)
 
-**OR**
+## How does it work
 
-![](./beecognition-demo-video.mp4)
+1. Each frame provided by the camera (or video file) will be processed to identify the bees in the image. The found bee positions will then be used to reconstruct the bee movements and paths using kalman filters. The paths are then used to count the bees entering or leaving the hive. Where the hive entry is on the upper part of the filmed pane and the exit is on the bottom.
+
+2. Each detected bee will then be cut from the image, rotated and forwarded to a neural network for classification.
+
+3. The neural network performs simple classification tasks to identify bees with pollen, varroa mite infected bees, bees cooling the hive or wasp and counts them. The results can also be visualized. The neural network runs in a separate process and the results may be too late to visualize them, as the bee may have already left the filmed area. But that depends on the performance of the used system.
 
 ## Technologies Involved
 
@@ -68,62 +64,62 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](http
 - **OpenCV:** For real-time computer vision tasks.
 - **Scikit-learn:** For additional machine learning utilities and functions.
 
-## Installation
+## Run on your device
 
 ### Prerequisites
 
-first install git in your system:
+<p>first install git in your system:</p>
+<br />
 `https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe`
 
-then install github desktop:
-`https://central.github.com/deployments/desktop/desktop/latest/win32
-`
+<p>then install github desktop:</p>
+<br />
+`https://central.github.com/deployments/desktop/desktop/latest/win32`
 
-1. Clone the repository:
+### Installations and Set Up
 
-   ```bash
-   git clone https://github.com/Shubham-Kpl/BeeCognition.git
-   ```
+<ol>
+  <li>
+   <h2> Clone the repository:</h2>
 
-2. Run Frontend setup
+    ```cmd
+    git clone
+    https://github.com/Shubham-Kpl/BeeCognition.git
+    ```
 
-   ```bash
-   cd beecognition/frontend
-   npm install
-   npm run dev
-   ```
+  </li>
+  <li> 
+  <h2>Run Frontend setup</h2>
+  ```cmd cd frontend npm install npm run dev ```</li>
+   
+   
+  <li>
+  <h2>Run Backend setup</h2>
 
-3. Run Backend setup
+    <p> Before anything, create and activate a virtual environment </p>
+    ```cmd python -m venv env .\env\scripts\activate ```
 
-   ```cmd
-   # Before anything, create and activate a virtual environment
-   # navigate to project root directory
-   python -m venv env
-   .\env\scripts\activate
-   ```
+    <p>Install requirements</p>
+    ```cmd cd backend pip install -r requirements.txt ```
 
-   ```cmd
-   cd beecognition/backend
-   pip install -r requirements.txt
-   ```
+    <p>Finally run backend</p>
+    ```cmd # You might need to change model_path in various files (e.g.
+    backend/image_classifier, backend/video_monitoring) python main.py ```
 
-   Now, update "model_path" inside backend/image_classifier and backend/video_monitoring files
+  </li>
+</ol>
 
-   ```cmd
-   python main.py
-   ```
+### To run the model independently
 
-4. To run the model
+```cmd
+# navigate to project root directory
+.\env\scripts\activate
+```
 
-   ```cmd
-   # navigate to project root directory
-   .\env\scripts\activate
-   ```
-
-   ```cmd
-   cd backend/machine_learning
-   python main.py --video absolute_video_path
-   ```
+```cmd
+cd backend/machine_learning
+python main.py --video video_path
+```
 
 ## What is still to do?
 
