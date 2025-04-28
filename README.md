@@ -125,7 +125,7 @@ python main.py
 
 </li>
 <li>
-<h3> To run the model independently</h3>
+<h2> To run the model independently</h2>
 
 First navigate to project root directory
 
