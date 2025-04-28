@@ -68,13 +68,13 @@ Watch the demo video of the Beecognition project: [Beecognition Demo Video](./da
 
 ### Prerequisites
 
-<p>First install git in your system</p>
+<h3>First install git in your system</h3>
 
 ```cmd
 https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe
 ```
 
-<p>Then install github desktop</p>
+<h3>Then install github desktop</h3>
 
 ```cmd
 https://central.github.com/deployments/desktop/desktop/latest/win32
@@ -117,26 +117,28 @@ cd backend pip install -r requirements.txt
 ```
 
   <h3>Finally run backend:</h3>
-   <i> You might need to change model_path in various files (e.g. backend/image_classifier, backend/video_monitoring) </i>
+   <i> (You might need to change model_path in various files (e.g. backend/image_classifier, backend/video_monitoring)) </i>
 
 ```cmd
 python main.py
 ```
 
 </li>
+<li><h3> To run the model independently</h3>
+
+First navigate to project root directory
+
+````cmd
+.\env\scripts\activate
+```</li>
 </ol>
 
-### To run the model independently
 
-```cmd
-# navigate to project root directory
-.\env\scripts\activate
-```
 
 ```cmd
 cd backend/machine_learning
 python main.py --video video_path
-```
+````
 
 ## What is still to do?
 
