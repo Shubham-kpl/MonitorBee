@@ -84,7 +84,7 @@ https://central.github.com/deployments/desktop/desktop/latest/win32
   <li>
    <h2> Clone the repository:</h2>
 
-    ```cmd
+    ```
     cd PROJECT_DIRECTORY
     git clone https://github.com/Shubham-Kpl/BeeCognition.git
     ```
