@@ -8,3 +8,4 @@
 
 # Backend
 /backend/uploaded_files
+/backend/machine_learning/__pycache__
