@@ -1,6 +1,3 @@
-print("Video_Monitoring.py started 📻❤️‍🔥")
-
-
 import subprocess
 from fastapi import FastAPI, BackgroundTasks, File, UploadFile, HTTPException
 import os
@@ -20,6 +17,7 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
+
 # Directory to save uploaded files
 UPLOAD_DIRECTORY = "uploaded_files"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)  # Create the directory if it doesn't exist
@@ -42,28 +40,20 @@ def stop_monitoring():
         return {"message": "Monitoring stopped successfully"}
 
 @app.post("/upload-vid")
-async def upload_vid(file: UploadFile = File(...)):
+async def upload_vid(background_tasks:BackgroundTasks, file: UploadFile = File(...)):
     try:
         file_location = os.path.join(UPLOAD_DIRECTORY, file.filename)
         with open(file_location, "wb+") as file_object:
             shutil.copyfileobj(file.file, file_object)
-        return {"file_location": file_location}
+            
+        background_tasks.add_task(start_monitoring, file_location)
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal server error: {e}")
 
-
-@app.post("/start-monitoring")
-async def start_monitoring_endpoint(background_tasks: BackgroundTasks,file_location: str):
-    if (file_location):
-        print(f"File location received: {file_location}")
-        print(f"script path: {script_path}")
-        background_tasks.add_task(start_monitoring, file_location)
-        return {"message": "Monitoring started", "file_location": file_location}
-    else:
-        return {"error": "File not found", "file_location": file_location}
-
 @app.post("/stop-monitoring")
-async def stop_monitoring_endpoint():
+async def stop_monitoring():
+    print("Monitoring stopped")
     stop_monitoring()
     return {"message": "Monitoring stopped"}
 
