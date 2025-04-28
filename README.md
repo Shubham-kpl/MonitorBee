@@ -104,19 +104,19 @@ cd frontend npm install npm run dev
 <li>
 <h2>Run Backend setup</h2>
 
-  <p> Before anything, create and activate a virtual environment </p>
+  <h3> Before anything, create and activate a virtual environment: </h3>
 
 ```cmd
 python -m venv env .\env\scripts\activate
 ```
 
-  <p>Install requirements</p>
+  <h3>Then install requirements:</h3>
 
 ```cmd
 cd backend pip install -r requirements.txt
 ```
 
-  <p>Finally run backend</p>
+  <h3>Finally run backend:</h3>
    <i> You might need to change model_path in various files (e.g. backend/image_classifier, backend/video_monitoring) </i>
 
 ```cmd
