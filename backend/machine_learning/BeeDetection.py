@@ -6,6 +6,10 @@ from Utils import get_config
 
 logger = logging.getLogger(__name__)
 
+# loading an image through opencv
+# frame = cv2.imread('bees.png')
+# scale = 1.0
+
 
 def detect_bees(frame, scale):
 
@@ -27,14 +31,22 @@ def detect_bees(frame, scale):
 
     # Blur Image and perform a binary thresholding
     o = cv2.GaussianBlur(o, (9,9), 9)
+    # print(f'After Gaussian Blur: {o}')
+
     _, o = cv2.threshold(o, get_config("BINARY_THRESHOLD_VALUE"), \
             get_config("BINARY_THRESHOLD_MAX"), cv2.THRESH_BINARY)
+    
+    # print(f'After bianry thresholding: {o}')
 
     # Invert result
     o = 255 -o
 
     # Detect contours
     contours, hierarchy = cv2.findContours(o, cv2.RETR_LIST, cv2.CHAIN_APPROX_TC89_KCOS)
+
+    # for contour in contours:
+    #     print(f'Contour : {contour}')
+
     ellipses = []
     groups = []
     for i in range(len(contours)):
@@ -45,11 +57,13 @@ def detect_bees(frame, scale):
             # Fit ellipse
             e = cv2.fitEllipse(contours[i])
 
+            # print(f'Fitted ellipse : {e}')
+
             # Skip too small detections
             if e[1][0] < 8 or e[1][1] < 8:
                 continue
 
-            # Only use ellipses with minium size
+            # Only use ellipses with minimum size
             ellipseArea = area(e)
             if ellipseArea > get_config("DETECT_ELLIPSE_AREA_MIN_SIZE") \
                     and ellipseArea < get_config("DETECT_ELLIPSE_AREA_MAX_SIZE"):
@@ -63,6 +77,13 @@ def detect_bees(frame, scale):
                 # Scale ellipse to desired size
                 e = ((e[0][0] * scale, e[0][1] * scale), (e[1][0] * scale, e[1][1] * scale), e[2])
                 groups.append(e)
+
+
+    # for ellipse in ellipses:
+    #     print(f'ellipse : {ellipse}')
+
+    # for group in groups:
+    #     print(f'group : {group}')
 
     # Merge nearby detection into one
     done = []
@@ -105,3 +126,16 @@ def detect_bees(frame, scale):
 
     return merged, groups
 
+
+# merged, groups = detect_bees(frame, scale)
+
+# print(f'merged: {merged}, {'\n'} \
+#       groups: {groups}')
+
+# for ellipse in merged:
+#     cv2.ellipse(frame, ellipse, (0, 255, 0), 2)
+
+
+# cv2.imshow('Detected bees', frame)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
