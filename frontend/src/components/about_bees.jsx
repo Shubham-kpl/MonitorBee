@@ -4,20 +4,20 @@ import "./css/about_bees.css";
 export default function AboutBees() {
   return (
     <section className="bees-sec" id="about-bees">
-      <h1>About Bees</h1>
+      {/* <h1>About Bees</h1> */}
       <div className="container">
         <div className="bees-features">
           <h2 className="heading-text">
-            Why <span>Bees</span> are Important
+            <span style={{ color: "#f0a500", fontSize: "2.5rem", fontWeight: "bold" }}>Bees</span>,  Important?
           </h2>
-          <p className="content-p">
+          {/* <p className="content-p">
             Bees are essential creatures as they pollinate food crops. They play
             an important role in the preservation of healthy ecosystems. Apart
             from food production, they enormously contribute to the enhancement
             of landscapes. Through beekeeping, one can earn an endurable living.
             It is our foremost responsibility to protect bees and other
             pollinators.
-          </p>
+          </p> */}
         </div>
         <div className="bees-important box flex">
           <div

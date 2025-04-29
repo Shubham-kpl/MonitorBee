@@ -1,7 +1,7 @@
 /* File uploading */
 .test-the-model {
-  background-color: #ecf0f1;
-  margin: 0;
+  background-color: #dcdfe3;
+  margin-top: 2.5rem;
   padding: 2rem 2rem;
   padding-bottom: 3rem;
   margin-bottom: 40px;
@@ -13,28 +13,50 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 10rem; /* Space between image and video forms */
-  flex-wrap: nowrap; /* Force them to stay in one line */
+  gap: 10rem;
+  /* Space between image and video forms */
+  flex-wrap: nowrap;
+  /* Force them to stay in one line */
 }
 
 .upload-section {
-  background-color: #d0e5f3;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  /* width: 400px; Fixed width so both fit side by side */
+  /* background-color: #a9b6c6; */
+  /* Changed from #d0e5f3 */
+  padding: 1.5rem 2.5rem;
+  /* Slightly increased padding */
+  border-radius: 12px;
+  /* Increased border radius */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  /* Enhanced shadow */
   text-align: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-sizing: border-box;
 }
 
+.upload-section:hover {
+  transform: translateY(-2px);
+  /* Added subtle hover effect */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
 .upload-section form {
+  display: flex;
+  gap: 4rem;
+  padding: 1rem;
+  /* Added padding */
+  border-radius: 8px;
+  /* Added border radius */
+  background-color: #ffffff;
+  /* Added white background */
+}
+
+.upload-section form button {
   display: flex;
   gap: 4rem;
 }
 
 .upload-section form button {
-  background-color: #384e66;
+  background-color: #ab9674;
   color: white;
   cursor: pointer;
   display: block;
@@ -42,6 +64,7 @@
   padding: 8px;
   font-size: 1rem;
   border-radius: 5px;
+  border: none;
   margin: auto;
 }
 
@@ -80,14 +103,16 @@
 
 table {
   width: 60%;
-  border-collapse: collapse; /* Important: removes double borders */
+  border-collapse: collapse;
+  /* Important: removes double borders */
   margin: 20px auto;
   font-family: Arial, sans-serif;
 }
 
 th,
 td {
-  border: 2px solid #333; /* Border on ALL sides */
+  border: 2px solid #333;
+  /* Border on ALL sides */
   padding: 10px;
   text-align: center;
 }

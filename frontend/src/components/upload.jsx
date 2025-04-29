@@ -83,13 +83,13 @@ export default function Upload() {
 
   return (
     <div className="test-the-model" id="test-the-model">
-      <h1 style={{ marginBottom: "2rem" }}>Test the Model</h1>
+      <h1 style={{ marginBottom: "2rem" }}>Try Monitor<span style={{ color: "#f0a500" }}>Bee</span></h1>
       <div className="file-upload-container" id="file-upload-container">
         <div className="upload-section upload-image">
           <h2 style={{ marginTop: "0.5rem", marginBottom: "1.2rem" }}>
             Upload Image
           </h2>
-          <form>
+          <form style={{ backgroundColor: "#dcdfe3", padding: "20px", borderRadius: "8px" }}>
             <input type="file" onChange={handleFileChange} />
             <button
               className="form-button upload-img"
@@ -126,10 +126,10 @@ export default function Upload() {
                         {imgName[0] == "c"
                           ? "Cooling"
                           : imgName[0] == "v"
-                          ? "Varroa Mite"
-                          : imgName[0] == "p"
-                          ? "Pollen"
-                          : "Wasp"}
+                            ? "Varroa Mite"
+                            : imgName[0] == "p"
+                              ? "Pollen"
+                              : "Wasp"}
                       </td>
                       <td>{+(Math.random() * 0.11 + 0.89).toFixed(3)}</td>
                     </tr>
@@ -143,7 +143,7 @@ export default function Upload() {
           <h2 style={{ marginTop: "0.5rem", marginBottom: "1.2rem" }}>
             Upload Video
           </h2>
-          <form>
+          <form style={{ backgroundColor: "#dcdfe3", padding: "20px", borderRadius: "8px" }}>
             <input type="file" onChange={handleFileChange} />
             <button
               className="form-button upload-vid"
