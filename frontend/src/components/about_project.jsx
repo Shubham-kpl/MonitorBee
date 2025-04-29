@@ -37,7 +37,13 @@ export default function AboutProject() {
               deliver real-time insights and data about bee activity within a
               hive:
               <h5>
-                <ol>
+                <ol
+                  style={{
+                    fontWeight: 350,
+                    letterSpacing: "1px",
+                    paddingLeft: "20px",
+                  }}
+                >
                   <li>Count Bees Entering or Leaving the Hive</li>
                   <li>Detect Varroa Infected Bees</li>
                   <li>Identify Bees Cooling the Hive</li>
