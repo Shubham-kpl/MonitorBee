@@ -10,3 +10,6 @@
 /backend/uploaded_files
 /backend/machine_learning/__pycache__
 /backend/machine_learning/BeeDetection1.py
+/backend/machine_learning/BeeDetection2.py
+/backend/machine_learning/bees.png
+
