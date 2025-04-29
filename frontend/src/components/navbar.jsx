@@ -42,7 +42,7 @@ export default function Navbar() {
             alt="MonitorBee Logo"
             className="logo-image"
           />
-          <span className="logo-text">MonitorBee</span>
+          <span className="logo-text">Monitor<span style={{ color: "#f0a500" }}>Bee</span></span>
         </div>
 
         <div
