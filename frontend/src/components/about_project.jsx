@@ -7,9 +7,9 @@ export default function AboutProject() {
       <h1
         style={{
           marginBottom: "2.5rem",
-          color: "#f0a500",  // Warm honey color
+          color: "#f0a500", // Warm honey color
           textAlign: "center",
-          fontSize: "3.5rem"
+          fontSize: "3.5rem",
         }}
       >
         MonitorBee
@@ -37,13 +37,13 @@ export default function AboutProject() {
               deliver real-time insights and data about bee activity within a
               hive:
               <h5>
-                <ul>
+                <ol>
                   <li>Count Bees Entering or Leaving the Hive</li>
                   <li>Detect Varroa Infected Bees</li>
                   <li>Identify Bees Cooling the Hive</li>
                   <li>Detect Bees with Pollen</li>
                   <li>Detect Wasps</li>
-                </ul>
+                </ol>
               </h5>
             </li>
             <li>
