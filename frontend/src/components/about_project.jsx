@@ -6,13 +6,16 @@ export default function AboutProject() {
     <section id="about-project" className="about-project">
       <h1
         style={{
-          marginBottom: "2rem",
+          marginBottom: "2.5rem",
+          color: "#f0a500",  // Warm honey color
+          textAlign: "center",
+          fontSize: "3.5rem"
         }}
       >
         MonitorBee
       </h1>
       <div className="about-project-content">
-        <h4 style={{ fontWeight: "350" }}>
+        <h4 style={{ fontWeight: "400", lineHeight: "1.8" }}>
           <ol>
             <li>
               This project envisions to provide an advanced, reliable, and

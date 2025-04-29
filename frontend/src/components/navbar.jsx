@@ -1,31 +1,69 @@
 import "./css/navbar.css";
+import { useState, useEffect } from 'react';
+
+const navigationLinks = {
+  main: [
+    { href: "#about-project", text: "The Project" },
+    { href: "#about-us-section", text: "About Us" },
+    { href: "#test-the-model", text: "Test" },
+    { href: "#about-bees", text: "Bees" },
+    { href: "#blogs", text: "Blogs" },
+    { href: "#login", text: "Login" }
+  ]
+};
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleSmoothScroll = (e, href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      e.preventDefault();
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <img src="../../images/bee.png" style={{ height: "5rem" }}></img>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-container">
+        <div className="logo">
+          <img
+            src="../../images/bee.png"
+            alt="MonitorBee Logo"
+            className="logo-image"
+          />
+          <span className="logo-text">MonitorBee</span>
+        </div>
+
+        <div className="mobile-menu-button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
+          {navigationLinks.main.map(({ href, text }) => (
+            <li key={href}>
+              <a
+                href={href}
+                onClick={(e) => handleSmoothScroll(e, href)}
+              >
+                {text}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="nav-links">
-        <li>
-          <a href="#about-project">The Project</a>
-        </li>
-        <li>
-          <a href="#about-us-section">About Us</a>
-        </li>
-        <li>
-          <a href="#test-the-model">Test</a>
-        </li>
-        <li>
-          <a href="#about-bees">Bees</a>
-        </li>
-        <li>
-          <a href="#blogs">Blogs</a>
-        </li>
-        <li>
-          <a href="#login">Login</a>
-        </li>
-      </ul>
     </nav>
   );
 }
