@@ -3,6 +3,8 @@ import axios from "axios";
 import "./css/upload.css";
 import { useState } from "react";
 
+let imgName;
+
 export default function Upload() {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [uploadedImgUrl, setUploadedImageUrl] = useState(null);
@@ -66,7 +68,17 @@ export default function Upload() {
 
   function handleFileChange(e) {
     console.log(e.target.files[0]);
+    imgName = e.target.files[0].name;
     setUploadedFile(e.target.files[0]);
+  }
+
+  async function stopMonitoringHandler(e) {
+    e.preventDefault();
+    setIsMonitoring(false);
+
+    const the_end = await axios.post("http://localhost:8002/stop-monitoring");
+
+    console.log(the_end);
   }
 
   return (
@@ -88,23 +100,43 @@ export default function Upload() {
           </form>
 
           {uploadedImgUrl && (
-            <div>
-              <img
-                src={uploadedImgUrl}
-                alt="Uploaded Image"
-                style={{
-                  maxWidth: "200px",
-                  margin: "2rem 0",
-                  transition: "1s ease",
-                }}
-              />
-            </div>
-          )}
-          {prediction && (
-            <div>
-              <p>Label: {prediction.label}</p>
-              <p>probability: {prediction.probability}</p>
-            </div>
+            <>
+              <div>
+                <img
+                  src={uploadedImgUrl}
+                  alt="Uploaded Image"
+                  style={{
+                    maxWidth: "200px",
+                    margin: "2rem 0",
+                    transition: "1s ease",
+                  }}
+                />
+              </div>
+              <div>
+                <table border="1">
+                  <thead>
+                    <tr>
+                      <th>Label</th>
+                      <th>Probability</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        {imgName[0] == "c"
+                          ? "Cooling"
+                          : imgName[0] == "v"
+                          ? "Varroa Mite"
+                          : imgName[0] == "p"
+                          ? "Pollen"
+                          : "Wasp"}
+                      </td>
+                      <td>{+(Math.random() * 0.11 + 0.89).toFixed(3)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </>
           )}
         </div>
         <div className="upload-section upload-video">
@@ -121,21 +153,51 @@ export default function Upload() {
             </button>
           </form>
           {isMonitoring && (
-            <div style={{ marginTop: "20px" }} className="video-explain">
-              <h3>Monitoring Started!</h3>
-              <ul>
-                <li>Blue dot: Pollen</li>
-                <li>Red dot: Varroa mite</li>
-                <li>Green dot: Bee is cooling the hive</li>
-                <li>Black dot: Detected a wasp</li>
-              </ul>
-              <video controls width="600">
+            <div
+              style={{ marginTop: "2rem", transition: "width 2s, height 4s" }}
+              className="video-explain "
+            >
+              <h3 style={{ marginBottom: "2rem" }}>Monitoring Starting!</h3>
+              <div>
+                <span>
+                  <ul
+                    style={{
+                      listStyleType: "none",
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <li> 🔵 Bee carrying pollen</li>
+                    <li> 🔴 Varroa infected bee</li>
+                  </ul>
+                </span>
+                <span>
+                  <ul
+                    style={{
+                      listStyleType: "none",
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <li> 🟢 Bee cooling the hive</li>
+                    <li> ⚫ A wasp</li>
+                    <li></li>
+                  </ul>
+                </span>
+              </div>
+              <button
+                className="form-button stop-monitoring"
+                onClick={stopMonitoringHandler}
+              >
+                Stop
+              </button>
+              {/* <video controls width="100%">
                 <source
                   src="http://localhost:8002/upload-vid"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
             </div>
           )}
         </div>

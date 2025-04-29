@@ -1,6 +1,7 @@
 .about-project {
   padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #f4f4f4, #ffffff);
+  background: linear-gradient(to right, #d7d4d4, #f4f4f4, 120deg);
+  margin-bottom: 3rem;
 }
 
 .about-project-content {

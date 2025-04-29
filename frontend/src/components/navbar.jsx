@@ -1,15 +1,15 @@
 import "./css/navbar.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const navigationLinks = {
   main: [
     { href: "#about-project", text: "The Project" },
-    { href: "#about-us-section", text: "About Us" },
     { href: "#test-the-model", text: "Test" },
     { href: "#about-bees", text: "Bees" },
+    { href: "#about-us-section", text: "About Us" },
     { href: "#blogs", text: "Blogs" },
-    { href: "#login", text: "Login" }
-  ]
+    { href: "#login", text: "Login" },
+  ],
 };
 
 export default function Navbar() {
@@ -20,21 +20,21 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleSmoothScroll = (e, href) => {
     const element = document.querySelector(href);
     if (element) {
       e.preventDefault();
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setMobileMenuOpen(false);
     }
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="logo">
           <img
@@ -45,19 +45,19 @@ export default function Navbar() {
           <span className="logo-text">MonitorBee</span>
         </div>
 
-        <div className="mobile-menu-button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <div
+          className="mobile-menu-button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
+        <ul className={`nav-links ${mobileMenuOpen ? "active" : ""}`}>
           {navigationLinks.main.map(({ href, text }) => (
             <li key={href}>
-              <a
-                href={href}
-                onClick={(e) => handleSmoothScroll(e, href)}
-              >
+              <a href={href} onClick={(e) => handleSmoothScroll(e, href)}>
                 {text}
               </a>
             </li>

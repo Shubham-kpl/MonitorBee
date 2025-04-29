@@ -57,3 +57,51 @@
   cursor: pointer;
   border: none;
 }
+
+.stop-monitoring {
+  background-color: red;
+  padding: 0.5rem 4rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.stop-monitoring:hover {
+  background-color: rgb(240, 43, 43);
+}
+
+.video-explain {
+  transition: 1s ease-in-out;
+}
+
+/* Table */
+
+table {
+  width: 60%;
+  border-collapse: collapse; /* Important: removes double borders */
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: 2px solid #333; /* Border on ALL sides */
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
