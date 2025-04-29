@@ -63,3 +63,38 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.feature-link {
+  position: relative;
+  display: inline-block;
+}
+
+.feature-link a {
+  text-decoration: none;
+  color: #f0a500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.feature-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f0a500;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-link:hover::before {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.feature-link:hover a {
+  color: white;
+}

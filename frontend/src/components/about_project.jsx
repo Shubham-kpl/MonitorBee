@@ -12,7 +12,12 @@ export default function AboutProject() {
           fontSize: "3.5rem",
         }}
       >
-        Monitor<span style={{ fontSize: "3.5rem", color: "#f0a500" }}>Bee</span>
+        Monitor<span style={{
+          marginBottom: "2.5rem",
+          color: "#f0a500",
+          textAlign: "center",
+          fontSize: "3.5rem",
+        }}>Bee</span>
       </h1>
       <div className="about-project-content">
         <div className="card-grid">
@@ -31,7 +36,20 @@ export default function AboutProject() {
             <p>
               We aim to help in effectively identifying and tracking bees,
               monitoring beehives in real-time, detecting bee characteristics
-              such as pollen packages, varroa mite infections, and even wasps,
+              such as {' '}
+              <span className="feature-link">
+                <a href="https://beeswiki.com/bee-pollination/">bees with pollen</a>
+              </span>,{' '}
+              <span className="feature-link">
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5076640/">varroa mite infections</a>
+              </span>,{' '}
+              <span className="feature-link">
+                <a href="https://backyardvisitors.com/honeybee-hive-climate-control-temperature-humidity-and-more/">bee cooling the hive</a>
+              </span>{' '}
+              and{' '}
+              <span className="feature-link">
+                <a href="https://en.wikipedia.org/wiki/Wasp">wasps</a>
+              </span>,
               and ensuring the health and productivity of hives and overall
               surrounding environment.
             </p>
@@ -49,7 +67,7 @@ export default function AboutProject() {
           </div>
 
           <div className="info-card">
-            <h3>Technology</h3>
+            <h3>Workflow</h3>
             <p>
               Each frame from the camera is processed to identify bees, track
               their movements, and classify their activities using a neural

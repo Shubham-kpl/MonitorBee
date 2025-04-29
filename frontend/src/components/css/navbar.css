@@ -114,7 +114,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background: white;
+    background: #ab9674;
     padding: 1rem;
     gap: 1rem;
     transform: translateY(-100%);
